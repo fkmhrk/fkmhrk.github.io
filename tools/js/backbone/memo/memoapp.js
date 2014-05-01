@@ -59,7 +59,6 @@ var MemoList = Backbone.Collection.extend({
         var rightTime = right.get('_modified');
         if (leftTime == null) { leftTime = left.get('_created'); }
         if (rightTime == null) { rightTime = right.get('_created'); }
-        console.log(left.get('title') + leftTime + " / " + rightTime + right.get('title'));
         return leftTime < rightTime ? 1 : leftTime > rightTime ? -1 : 0;
     },
     createMemo : function(title, contents, success) {
