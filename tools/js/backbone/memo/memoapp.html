@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Memo Application</title>
+ <script type="text/javascript" src="underscore.js"></script>
+ <script type="text/javascript" src="jquery-1.9.1.js"></script>
+ <script type="text/javascript" src="json2.js"></script> 
+ <script type="text/javascript" src="backbone.js"></script>
+</head>
+<body>
+<h1>Memo Application</h1>
+
+<section id="container"></section>
+
+<section id="page_top" style="display:none">
+
+</section>
+<section id="page_create" style="display:none">
+  <label>Title</label><br/>
+  <input type="text" id="edit_title"/><br>
+  <label>Contents</label><br/>
+  <textarea id="edit_contents"></textarea>
+  <button id="button_create">Create</button>
+</section>
+
+<script type="text/template" id="layout_title">
+  <label>Username</label><input type="text" id="username"/><br>
+  <label>Password</label><input type="password" id="password"/><br>
+  <button id="button_login">Login</button>  
+</script>
+
+<script type="text/template" id="layout_top">
+  <section style="float:left;clear:right;width:50%;">
+  <button id="button_create">Create</button>
+  <table>
+    <thead>
+      <tr><th>タイトル</th></tr>
+    </thead>
+    <tbody id="listView"></tbody>
+  </table>
+  </section>
+  <section>
+    <h1>本文</h1>
+    <p id="text_contents"></p>
+  </section>
+</script>
+
+<script type="text/template" id="layout_item_memo">
+  <td><%= title %></td>
+  <td><button id="button_view">View</button></td>  
+  <td><button id="button_delete">Delete</button></td>
+</script>
+
+<script type="text/template" id="layout_create">
+  <label>Title</label><br/>
+  <input type="text" id="edit_title"/><br>
+  <label>Contents</label><br/>
+  <textarea id="edit_contents"></textarea>
+  <button id="button_create_memo">Create</button>
+</script>
+
+<script type="text/javascript" src="memoapp.js"></script>
+</body>
+</html>
